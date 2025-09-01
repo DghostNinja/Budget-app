@@ -7,6 +7,7 @@ requiredFiles = [".replit", "replit.nix", "package.json", "package-lock.json"]
 
 [nix]
 channel = "stable-24_11"
+packages = ["wget"]
 
 [deployment]
 run = ["node", "index.js"]
@@ -16,3 +17,14 @@ ignorePorts = false
 [[ports]]
 localPort = 5001
 externalPort = 80
+
+[[ports]]
+localPort = 8081
+externalPort = 8081
+
+[[ports]]
+localPort = 8082
+externalPort = 3000
+
+[agent]
+expertMode = true
